@@ -24,3 +24,22 @@ function controlla(){
         document.getElementById('testo').innerText = "email inserita!"
     }
 }
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+let giocatore = Math.round( Math.random()* 6 ) + 1;
+let cpu = Math.round( Math.random()* 6 ) + 1;
+
+document.getElementById('numGiocatore').innerText = `Il numero giocatore: ${giocatore}`
+document.getElementById('numeCpu').innerText = `Il numero cpu: ${cpu} `
+
+let vittorieGiocatore = [];
+
+if( giocatore > cpu){
+    document.getElementById('risultato').innerText = `Ha vinto: Giocatore`
+    vittoriaGiocatore.push('vinto');
+}else if ( cpu > giocatore ){
+    document.getElementById('risultato').innerText = `Ha vinto: Cpu`
+}else{
+    document.getElementById('risultato').innerText = `Pareggio`
+}
