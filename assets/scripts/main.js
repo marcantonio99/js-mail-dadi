@@ -31,7 +31,7 @@ let giocatore = Math.round( Math.random()* 6 ) + 1;
 let cpu = Math.round( Math.random()* 6 ) + 1;
 
 document.getElementById('numGiocatore').innerText = `Il numero giocatore: ${giocatore}`
-document.getElementById('numeCpu').innerText = `Il numero cpu: ${cpu} `
+document.getElementById('numCpu').innerText = `Il numero cpu: ${cpu} `
 
 let vittorieGiocatore = [];
 
