@@ -1,12 +1,26 @@
 /*creo un array delle mail*/
-let list = ['sergio@mail.com', 'ponzio89@mail.it, rubberduck@mail.com'];
+let list = ['sergio@email.com', 'ponzio89@email.it, rubberduck@email.com'];
 console.log(list);
-
-const inputMail = document.getElementById('inputMail');
+/*recupero l'elemento html*/
+let inputEmail = document.getElementById('inputEmail');
+/*variabile soldatino*/
+let presenzaEmail = false;
 /*faccio partire la funzione al click*/
 function controlla(){
-    let valueMail = inputMail.value;
+    let valueEmail = inputEmail.value;
 
-    list.push(valueMail);
-    console.log(list);
+    for(let i=0; i<list.length; i++){
+        let thisEmail = list[i];
+        console.log(thisEmail);
+
+        if(valueEmail == thisEmail){
+            presenzaEmail = true;
+        }
+    }
+
+    if( presenzaEmail ){
+        document.getElementById('testo').innerText = "email presente nella lista"
+    }else{
+        document.getElementById('testo').innerText = "email inserita!"
+    }
 }
